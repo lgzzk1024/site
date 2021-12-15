@@ -1,11 +1,13 @@
+// noinspection ThisExpressionReferencesGlobalObjectJS
+
 "use strict";
 
 (function ( window ){
 	
-	var elExp = /\w+/,
+	let elExp = /\w+/,
 	htmlExp = /^<\w+>/,
 	valExp = /<[^>]+>/g,
-	events = {},
+	//events = {},
 	document = window.document,
 	LGZZK = function( selector ){
 		return new LGZZK.fn.init( selector );
@@ -18,7 +20,7 @@
 		init: function ( selector ){
 			
 			var elem,
-			i = 0,
+			// i = 0,
 			selectorType = typeof selector;
 			// HANDLE: (""), (null), (undefined), (false)
 			if( !selector ){
@@ -27,7 +29,7 @@
 			this.length = 0;
 			selector = selectorType !== "string" ? selector : selector.trim();
 			if( selectorType === "string" ){
-				if( htmlExp.exec( selector ) ){ 
+				if( htmlExp.exec( selector ) ){
 					try{
 						this[ 0 ] = document.createElement( elExp.exec( selector ) );
 						this[ 0 ].innerText = selector.replace( valExp, "" );
@@ -42,7 +44,7 @@
 				}
 			}else {
 				switch( LGZZK.toRawType( selector ) ){
-					case LGZZK: 
+					case LGZZK:
 					case NodeList: {
 						elem = selector;
 						addElem( this, elem );
@@ -124,7 +126,7 @@
 			}
 		},
 		html: function ( value ){
-			if( arguments.length == 0 ){
+			if( arguments.length === 0 ){
 				let str = "";
 				LGZZK.each( this, function (){
 					str += this.innerHTML;
@@ -137,7 +139,7 @@
 			}
 		},
 		val: function ( value ){
-			if( arguments.length == 0 ){
+			if( arguments.length === 0 ){
 				return this[ 0 ].value;
 			}else{
 				this[ 0 ].value = value;
@@ -252,8 +254,8 @@
 			xhr = new ActiveXObject( "Microsoft.XMLHTTP" );
 		}
 		xhr.onreadystatechange = function (){
-			if( xhr.readyState == 4 ){
-				if( xhr.status >= 200 && status < 300 || status == 304 ){
+			if( xhr.readyState === 4 ){
+				if( xhr.status >= 200 && xhr.status < 300 || xhr.status == 304 ){
 					if( dataType === "text" ){
 						res = xhr.responseText;
 					}else if( dataType === "xml" ){
@@ -292,7 +294,7 @@
 	}
 	LGZZK.random = function (a,b){
 		return Math.floor(Math.random()*(b+1)+a);
-	},
+	}
 	
 	LGZZK.prototype.init.prototype = LGZZK.prototype;
 	window.Z = window.LGZZK = LGZZK;
