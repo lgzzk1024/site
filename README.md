@@ -1,9 +1,5 @@
 # site
 LGZZK-博客小站
-[![Library][library-screenshot]](https://music.qier222.com)
-
-## ✨ 特性
-
 - ✅ 使用 Vue.js 全家桶开发
 - 🔴 网易云账号登录（扫码/手机/邮箱登录）
 - 📺 支持 MV 播放
