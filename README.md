@@ -1,3 +1,6 @@
 # site
 LGZZK-博客小站
-![image](https://user-images.githubusercontent.com/46087700/146640380-aa612c61-aba6-4d83-b26b-a1f5fc32c9c9.png)
+![](https://cdn.jsdelivr.net/gh/lgzzk/lgzzk@master/1.jpg)
+![](https://cdn.jsdelivr.net/gh/lgzzk/lgzzk@master/2.jpg)
+![](https://cdn.jsdelivr.net/gh/lgzzk/lgzzk@master/3.jpg)
+![](https://cdn.jsdelivr.net/gh/lgzzk/lgzzk@master/4.jpg)
